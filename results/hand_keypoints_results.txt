@@ -1,0 +1,52 @@
+
+==============================
+HAND KEYPOINTS LSTM RESULTS
+==============================
+
+Running Model:
+LSTM gesture classifier using MediaPipe hand keypoints
+
+Dataset:
+Total samples: 160
+Classes: DANGER, HELP
+
+Weights:
+Model trained and loaded successfully
+
+Inference:
+Keypoint sequence passed through trained model
+
+Prediction Example:
+Actual Label: HELP
+Predicted Label: DANGER
+Confidence: 62.24%
+
+Performance:
+Test Accuracy: 68.75%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      DANGER       0.62      0.94      0.75        16
+        HELP       0.88      0.44      0.58        16
+
+    accuracy                           0.69        32
+   macro avg       0.75      0.69      0.67        32
+weighted avg       0.75      0.69      0.67        32
+
+
+Confusion Matrix:
+[[15  1]
+ [ 9  7]]
+
+Speed:
+Average inference time: 0.000390 seconds
+Estimated FPS: 2563.25
+
+Metrics Used:
+Accuracy, Precision, Recall, F1-score, Confusion Matrix, Inference Time, FPS
+
+Notes:
+- DANGER detection is strong
+- HELP is sometimes confused with DANGER
+- Model uses hand keypoints only (no body context)
